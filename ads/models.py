@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+class __ads(models.Model):
+    content1 = models.TextField()
+    image = models.URLField()
+    content2 = models.TextField()
