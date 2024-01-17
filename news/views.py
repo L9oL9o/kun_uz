@@ -38,7 +38,7 @@ class CategoriesView(View):
 
 
 class DetailNewsView(View):
-    def get_by_id(self, request, news_id):
+    def get(self, request, news_id):
         detail_news_item = get_object_or_404(DetailNews, id=news_id)
         return render(request, 'detail_news.html', {'detail_new_item': detail_news_item})
 

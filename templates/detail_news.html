@@ -6,35 +6,46 @@
 {% endblock %}
 
 {% block content %}
-    
-    <p>{{ detail_new_item.pub_date }}</p>
-    <h2>{{ detail_new_item.title }}</h2>
-    <h4>{{ detail_new_item.short_text }}</h4>
-    <img src="{{ detail_new_item.img_url }}" alt="news img">
-    <p> {{ detail_new_item.detail_text }}</p>
-    <p>{{ detail_new_item.tag_name }}</p>
-    
-{#    <p>#}
-{#        {% for i in  detail_new_item %}#}
-{#            {{ detail_new_item.pub_date }}#}
-{#        {% endfor %}#}
-{#    </p>#}
-{#    <h2>#}
-{#        {% for i in detail_new_item %}#}
-{#            {{ detail_new_item.title }}#}
-{#        {% endfor %}#}
-{#    </h2>#}
-{#    <h4>#}
-{#        {% for i in detail_new_item %}#}
-{#            {{ detail_new_item.short_text }}#}
-{#        {% endfor%}#}
-{#        #}
-{#        <img src="{{ detail_new_item.img_url }}" alt="news photo">#}
-{#    </h4>#}
-{#    <h6>#}
-{#        {% for i in detail_new_item %}#}
-{#            {{ detail_new_item.detail_text }}#}
-{#        {% endfor %}#}
-{#    </h6>#}
+  <style>
+    .limited-width {
+      margin: 0 auto;
+      max-width: 1500px;
+      width: 900px;
+      padding: 20px; /* Просто для дополнительного отступа внутри рамки */
+      border: 2px solid #ccc; /* Линия рамки */
+    }
+  </style>
+    <div class="limited-width">
+        <p>{{ detail_new_item.pub_date }}</p>
+        <h2>{{ detail_new_item.title }}</h2>
+        <h4>{{ detail_new_item.short_text }}</h4>
+        <img src="{{ detail_new_item.img_url }}" alt="news img" style="width: 900px">
+        <p> {{ detail_new_item.detail_text }}</p>
+        <p>{{ detail_new_item.tag_name }}</p>
+    </div>
+
+
+    {#    <p>#}
+    {#        {% for i in  detail_new_item %}#}
+    {#            {{ detail_new_item.pub_date }}#}
+    {#        {% endfor %}#}
+    {#    </p>#}
+    {#    <h2>#}
+    {#        {% for i in detail_new_item %}#}
+    {#            {{ detail_new_item.title }}#}
+    {#        {% endfor %}#}
+    {#    </h2>#}
+    {#    <h4>#}
+    {#        {% for i in detail_new_item %}#}
+    {#            {{ detail_new_item.short_text }}#}
+    {#        {% endfor%}#}
+    {#        #}
+    {#        <img src="{{ detail_new_item.img_url }}" alt="news photo">#}
+    {#    </h4>#}
+    {#    <h6>#}
+    {#        {% for i in detail_new_item %}#}
+    {#            {{ detail_new_item.detail_text }}#}
+    {#        {% endfor %}#}
+    {#    </h6>#}
 {% endblock %}
 

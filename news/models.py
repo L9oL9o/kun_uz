@@ -61,8 +61,9 @@ class Categories(Model):
     class Meta:
         verbose_name_plural = "Categories"
 
+
 class Tags(Model):
-    tags = CharField(max_length=100)
+    tags = CharField(max_length=100, unique=True)
 
     def save(self, *args, **kwargs):
         if not self.tags.startswith('#'):
@@ -82,9 +83,8 @@ class DetailNews(Model):
     detail_text = TextField()
     img_url = URLField()
     pub_date = DateTimeField(auto_now_add=True)
-    category = ForeignKey(Categories, on_delete=CASCADE)
-    # category = ManyToManyField(Categories)
-    tag_name = ForeignKey(Tags, on_delete=CASCADE)
+    category = ForeignKey(Categories, on_delete=CASCADE, related_name='news_categories')
+    tag_name = ManyToManyField(Tags, related_name='news_tags')
 
     def __str__(self):
         return self.title

@@ -14,7 +14,7 @@ from .views import CategoriesView, DetailNewsView, ShortNewsView, ShortNewsDetai
 urlpatterns = [
     # path('', views)
     path('categories/', CategoriesView.as_view(), name='categories'),
-    path('detail-news/<int:news_id>/', DetailNewsView.as_view(), name='detail_news'),
+    path('detailNews/<int:news_id>/', DetailNewsView.as_view(), name='detail_news'),
 
     # path('detail-news/<int:category_id>/<int:news_id>/', DetailNewsView.as_view(), name='detail_news'),
     path('short/<int:category_id>/', ShortNewsView.as_view(), name='short_news'),
