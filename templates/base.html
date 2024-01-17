@@ -9,6 +9,15 @@
     </title>
 </head>
 <body>
+    {% block ads %}
+        {% for ad in ads %}
+            <div>
+                {{ ad.content1 }}
+                <img src="{{ ad.image.url }}" alt="Ad Image">
+                {{ ad.content2 }}
+            </div>
+        {% endfor %}
+    {% endblock ads %}
 <p>
     <a href="{{ category.id }}">{{ category.category_name }}</a>
 </p>
