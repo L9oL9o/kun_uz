@@ -1,0 +1,25 @@
+<!-- detail_news.html -->
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ news_item.title }}
+{% endblock %}
+
+
+{% block content %}
+  <h2>Detail News</h2>
+  <article>
+    <h3>{{ news_item.title }}</h3>
+    <p>{{ news_item.detail_text }}</p>
+    <img src="{{ news_item.img_url }}" alt="{{ news_item.title }}">
+    <p>Published on: {{ news_item.pub_date }}</p>
+    <p>Category: {{ news_item.category }}</p>
+    <p>Tag: {{ news_item.tag_name }}</p>
+  </article>
+
+
+
+
+
+{% endblock %}
+

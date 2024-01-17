@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ news_item.title }}
+{% endblock %}
+
+{% block content %}
+    <h5>
+        <a href="{{ category.id }}">{{ category.cate }}</a>
+    </h5>
+
+
+{% endblock content %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    {{ short_news_list.title }}
+{% endblock %}
+
+{% block content %}
+    <div class="top-news__big">
+        <a class="big-news" href="detail/{{ short_news_list.id }}">
+        <span class="big-news__img">
+            <img src="{{ short_news_list.img_url }}" alt="short new photo">
+        </span>
+            <span class="big-news__content">
+            <div class="news-meta">
+                <span>
+                    {{ short_news_list.pub_date }}
+                </span>
+            </div>
+            <span class="big-news__title">
+                {{ short_news_list.title }}
+            </span>
+            <span class="big-news__description">
+                {{ short_news_list.short_text }}
+            </span>
+        </span>
+        </a>
+    </div>
+{% endblock %}
