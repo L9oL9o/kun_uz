@@ -1,6 +1,6 @@
-from django.urls import path
-from .views import ad
+# from django.urls import path
+# from .views import ad
 
 urlpatterns = [
-    path('', ad)
+    # path('', ad)
 ]
